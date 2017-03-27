@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+<meta charset="utf-8" />
+<title>Notebook | Web Application</title>
+<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/app.v2.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap-treeview.css" type="text/css" />
+<link rel="stylesheet" href="js/calendar/bootstrap_calendar.css" type="text/css" cache="false" />
+<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font.css" type="text/css" cache="false" />
+<link rel="stylesheet" href="js/select2/select2.css" type="text/css" cache="false" />
+<link rel="stylesheet" href="js/select2/theme.css" type="text/css" cache="false" />
+<link rel="stylesheet" href="js/fuelux/fuelux.css" type="text/css" cache="false" />
+<link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" cache="false" />
+<link rel="stylesheet" href="js/slider/slider.css" type="text/css" cache="false" />
+<style type="text/css">
+  .jq22-header{margin-bottom: 15px;font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;}
+  .jq22-icon{color: #fff;}
+</style>
+</head>
+<body>
+<section class="vbox">
+  <header class="bg-dark dk header navbar navbar-fixed-top-xs">
+    <div class="navbar-header aside-md"> <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen" data-target="#nav"> <i class="fa fa-bars"></i> </a> <a href="#" class="navbar-brand" data-toggle="fullscreen"></a> <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".nav-user"> <i class="fa fa-cog"></i> </a> </div>
+
+    <ul class="nav navbar-nav navbar-right hidden-xs nav-user">
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="thumb-sm avatar pull-left"> <img src="images/avatar.jpg"> </span> 薛亚斌 <b class="caret"></b> </a>
+        <ul class="dropdown-menu animated fadeInRight">
+          <span class="arrow top"></span>
+          <li> <a href="#">Settings</a> </li>
+          <li> <a href="profile.html">Profile</a> </li>
+          <li> <a href="#"> <span class="badge bg-danger pull-right">3</span> Notifications </a> </li>
+          <li> <a href="docs.html">Help</a> </li>
+          <li class="divider"></li>
+          <li> <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a> </li>
+        </ul>
+      </li>
+    </ul>
+  </header>
+  <section>
+    <section class="hbox stretch"> <!-- .aside -->
+      <aside class="bg-dark lter aside-md hidden-print" id="nav">
+        <section class="vbox">
+          <section class="w-f scrollable">
+            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px" data-color="#333333"> <!-- nav -->
+              <nav class="nav-primary hidden-xs">
+                <ul class="nav">
+                  <li class="active"> <a href="#uikit"  > <i class="fa fa-flask icon"> <b class="bg-success"></b> </i> <span class="pull-right"> <i class="fa fa-angle-down text"></i> <i class="fa fa-angle-up text-active"></i> </span> <span>自动化测试</span> </a>
+                    <ul class="nav lt">
+                      <li > <a href="testcase.html" > <i class="fa fa-angle-right"></i> <span>用例管理</span> </a> </li>
+                      <li > <a href="testtask.html" > <i class="fa fa-angle-right"></i> <span>任务管理</span> </a> </li>
+                      <li > <a href="testdemo.html" > <i class="fa fa-angle-right"></i> <span>模板管理</span> </a> </li>
+                      <li > <a href="testdemocreate.html" > <i class="fa fa-angle-right"></i> <span>创建模板</span> </a> </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <!-- / nav --> </div>
+          </section>
+          <footer class="footer lt hidden-xs b-t b-dark">
+            <div id="chat" class="dropup">
+              <section class="dropdown-menu on aside-md m-l-n">
+                <section class="panel bg-white">
+                  <header class="panel-heading b-b b-light">Active chats</header>
+                  <div class="panel-body animated fadeInRight">
+                    <p class="text-sm">No active chats.</p>
+                    <p><a href="#" class="btn btn-sm btn-default">Start a chat</a></p>
+                  </div>
+                </section>
+              </section>
+            </div>
+            <div id="invite" class="dropup">
+              <section class="dropdown-menu on aside-md m-l-n">
+                <section class="panel bg-white">
+                  <header class="panel-heading b-b b-light"> John <i class="fa fa-circle text-success"></i> </header>
+                  <div class="panel-body animated fadeInRight">
+                    <p class="text-sm">No contacts in your lists.</p>
+                    <p><a href="#" class="btn btn-sm btn-facebook"><i class="fa fa-fw fa-facebook"></i> Invite from Facebook</a></p>
+                  </div>
+                </section>
+              </section>
+            </div>
+            <a href="#nav" data-toggle="class:nav-xs" class="pull-right btn btn-sm btn-dark btn-icon"> <i class="fa fa-angle-left text"></i> <i class="fa fa-angle-right text-active"></i> </a>
+            <div class="btn-group hidden-nav-xs">
+              <button type="button" title="Chats" class="btn btn-icon btn-sm btn-dark" data-toggle="dropdown" data-target="#chat"><i class="fa fa-comment-o"></i></button>
+              <button type="button" title="Contacts" class="btn btn-icon btn-sm btn-dark" data-toggle="dropdown" data-target="#invite"><i class="fa fa-facebook"></i></button>
+            </div>
+          </footer>
+        </section>
+      </aside>
+      <!-- /.aside -->
+      <section id="content">
+        <section class="vbox">
+          <section class="scrollable padder">
+            <ul class="breadcrumb no-border no-radius b-b b-light pull-in" style="margin-bottom:0px">
+              <li><a href="index.html"><i class="fa fa-home"></i> 自动化测试</a></li>
+              <li class="active">用例管理</li>
+            </ul>
+                <section class="hbox stretch" >
+                  <aside class="aside-md b-r" id="subNav" style="border-right-width: 0px;">
+                    <section class="scrollable wrapper">
+                      <div class="row m-b">
+
+                        <div style="width:95%;">
+                          <div id="treeview5" class=""></div>
+                        </div>
+                      </div>
+                    </section>
+                  </aside>
+                  <aside style="margin-top:15px">
+                    <a href="#" class="btn btn-s-md btn-info" style="margin-top:15px;background-color:#428bca; border-color:#428bca;margin-bottom:10px">执行用例</a>
+
+                    <section class="panel panel-default" >
+                      <header class="panel-heading font-bold"> 用例属性 </header>
+                      <div class="panel-body">
+                        <table  class="table table-striped m-b-none">
+                          <tbody>
+                            <tr>
+                              <th>用例名称：</th>
+                              <td>用例1</td>
+                              <th>设计者：</th>
+                              <td>薛亚斌</td>
+                            </tr>
+                              <tr>
+                                <th>状态：</th>
+                                <td>未执行</td>
+                                <th>重要程度：</th>
+                                <td>重要</td>
+                              </tr>
+                                <tr>
+                                  <th>优先级：</th>
+                                  <td>紧急</td>
+                                  <th>用例类型：</th>
+                                  <td>手工</td>
+                                </tr>
+                                <tr>
+                                  <th>创建时间：</th>
+                                  <td>2017-01-12</td>
+                                  <td></td><td></td>
+                                </tr>
+                          </tbody>
+
+                        </table>
+                      </div>
+                    </section>
+                    <section class="panel panel-default">
+                      <header class="panel-heading bg-light">
+                        <ul class="nav nav-tabs nav-justified">
+                          <li class="active"><a href="#home" data-toggle="tab">用例步骤</a></li>
+                          <li><a href="#profile" data-toggle="tab">关联模板</a></li>
+                        </ul>
+                      </header>
+                      <div class="panel-body">
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="home">
+                            <a href="#" class="btn btn-s-md btn-info" style="background-color:#428bca; border-color:#428bca;margin-bottom:10px">新增步骤</a>
+                            <table  class="table table-striped m-b-none">
+                              <thead>
+                                <tr>
+                                  <th>序号</th>
+                                  <th>名称</th>
+                                  <th>描述</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>步骤1</td>
+                                  <td>备注1</td>
+                                </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>步骤2</td>
+                                    <td>备注2</td>
+                                  </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>步骤3</td>
+                                      <td>备注3</td>
+                                    </tr>
+                              </tbody>
+
+                            </table>
+                          </div>
+                          <div class="tab-pane" id="profile">
+                            <table  class="table table-striped m-b-none">
+                              <thead>
+                                <tr>
+                                  <th>步骤 </th>
+                                  <th>步骤描述</th>
+                                  <th>备注</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>模板1</td>
+                                  <td>描述1</td>
+                                </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>模板2</td>
+                                    <td>描述2</td>
+                                  </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>模板3</td>
+                                      <td>描述3</td>
+                                    </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </aside>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a>
+
+          </section>
+        </section>
+        <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen" data-target="#nav"></a> </section>
+      <aside class="bg-light lter b-l aside-md hide" id="notes">
+        <div class="wrapper">Notification</div>
+      </aside>
+    </section>
+  </section>
+</section>
+<script src="js/app.v2.js"></script> <!-- Bootstrap --> <!-- App -->
+<script src="js/charts/easypiechart/jquery.easy-pie-chart.js" cache="false"></script>
+<script src="js/charts/sparkline/jquery.sparkline.min.js" cache="false"></script>
+<script src="js/charts/flot/jquery.flot.min.js" cache="false"></script>
+<script src="js/charts/flot/jquery.flot.tooltip.min.js" cache="false"></script>
+<script src="js/charts/flot/jquery.flot.resize.js" cache="false"></script>
+<script src="js/charts/flot/jquery.flot.grow.js" cache="false"></script>
+<script src="js/charts/flot/demo.js" cache="false"></script>
+<script src="js/calendar/bootstrap_calendar.js" cache="false"></script>
+<script src="js/calendar/demo.js" cache="false"></script>
+<script src="js/sortable/jquery.sortable.js" cache="false"></script>
+<script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/bootstrap-treeview.js"></script>
+<script type="text/javascript">
+
+      $(function() {
+
+      var defaultData = [
+        {
+          text: '用例1',
+          href: '#parent1',
+          tags: ['4'],
+          nodes: [
+            {
+              text: '用例1.1',
+              href: '#child1',
+              tags: ['2'],
+              nodes: [
+                {
+                  text: '用例1.1.1',
+                  href: '#grandchild1',
+                  tags: ['0']
+                },
+                {
+                  text: '用例1.1.2',
+                  href: '#grandchild2',
+                  tags: ['0']
+                }
+              ]
+            },
+            {
+              text: '用例1.2',
+              href: '#child2',
+              tags: ['0']
+            }
+          ]
+        },
+        {
+          text: '用例2',
+          href: '#parent2',
+          tags: ['0']
+        },
+        {
+          text: '用例3',
+          href: '#parent3',
+           tags: ['0']
+        },
+        {
+          text: '用例4',
+          href: '#parent4',
+          tags: ['0']
+        },
+        {
+          text: '用例5',
+          href: '#parent5'  ,
+          tags: ['0']
+        }
+      ];
+
+      var alternateData = [
+        {
+          text: 'Parent 1',
+          tags: ['2'],
+          nodes: [
+            {
+              text: 'Child 1',
+              tags: ['3'],
+              nodes: [
+                {
+                  text: 'Grandchild 1',
+                  tags: ['6']
+                },
+                {
+                  text: 'Grandchild 2',
+                  tags: ['3']
+                }
+              ]
+            },
+            {
+              text: 'Child 2',
+              tags: ['3']
+            }
+          ]
+        },
+        {
+          text: 'Parent 2',
+          tags: ['7']
+        },
+        {
+          text: 'Parent 3',
+          icon: 'glyphicon glyphicon-earphone',
+          href: '#demo',
+          tags: ['11']
+        },
+        {
+          text: 'Parent 4',
+          icon: 'glyphicon glyphicon-cloud-download',
+          href: '/demo.html',
+          tags: ['19'],
+          selected: true
+        },
+        {
+          text: 'Parent 5',
+          icon: 'glyphicon glyphicon-certificate',
+          color: 'pink',
+          backColor: 'red',
+          href: 'http://www.tesco.com',
+          tags: ['available','0']
+        }
+      ];
+
+      var json = '[' +
+        '{' +
+          '"text": "Parent 1",' +
+          '"nodes": [' +
+            '{' +
+              '"text": "Child 1",' +
+              '"nodes": [' +
+                '{' +
+                  '"text": "Grandchild 1"' +
+                '},' +
+                '{' +
+                  '"text": "Grandchild 2"' +
+                '}' +
+              ']' +
+            '},' +
+            '{' +
+              '"text": "Child 2"' +
+            '}' +
+          ']' +
+        '},' +
+        '{' +
+          '"text": "Parent 2"' +
+        '},' +
+        '{' +
+          '"text": "Parent 3"' +
+        '},' +
+        '{' +
+          '"text": "Parent 4"' +
+        '},' +
+        '{' +
+          '"text": "Parent 5"' +
+        '}' +
+      ']';
+
+
+      $('#treeview1').treeview({
+        data: defaultData
+      });
+
+      $('#treeview2').treeview({
+        levels: 1,
+        data: defaultData
+      });
+
+      $('#treeview3').treeview({
+        levels: 99,
+        data: defaultData
+      });
+
+      $('#treeview4').treeview({
+
+        color: "#428bca",
+        data: defaultData
+      });
+
+      $('#treeview5').treeview({
+        color: "#428bca",
+        expandIcon: 'glyphicon glyphicon-chevron-right',
+        collapseIcon: 'glyphicon glyphicon-chevron-down',
+        nodeIcon: 'glyphicon glyphicon-bookmark',
+        data: defaultData
+      });
+
+      $('#treeview6').treeview({
+        color: "#428bca",
+        expandIcon: "glyphicon glyphicon-stop",
+        collapseIcon: "glyphicon glyphicon-unchecked",
+        nodeIcon: "glyphicon glyphicon-user",
+        showTags: true,
+        data: defaultData
+      });
+
+      $('#treeview7').treeview({
+        color: "#428bca",
+        showBorder: false,
+        data: defaultData
+      });
+
+      $('#treeview8').treeview({
+        expandIcon: "glyphicon glyphicon-stop",
+        collapseIcon: "glyphicon glyphicon-unchecked",
+        nodeIcon: "glyphicon glyphicon-user",
+        color: "yellow",
+        backColor: "purple",
+        onhoverColor: "orange",
+        borderColor: "red",
+        showBorder: false,
+        showTags: true,
+        highlightSelected: true,
+        selectedColor: "yellow",
+        selectedBackColor: "darkorange",
+        data: defaultData
+      });
+
+      $('#treeview9').treeview({
+        expandIcon: "glyphicon glyphicon-stop",
+        collapseIcon: "glyphicon glyphicon-unchecked",
+        nodeIcon: "glyphicon glyphicon-user",
+        color: "yellow",
+        backColor: "purple",
+        onhoverColor: "orange",
+        borderColor: "red",
+        showBorder: false,
+        showTags: true,
+        highlightSelected: true,
+        selectedColor: "yellow",
+        selectedBackColor: "darkorange",
+        data: alternateData
+      });
+
+      $('#treeview10').treeview({
+        color: "#428bca",
+        enableLinks: true,
+        data: defaultData
+      });
+
+
+
+      var $searchableTree = $('#treeview-searchable').treeview({
+        data: defaultData,
+      });
+
+      var search = function(e) {
+        var pattern = $('#input-search').val();
+        var options = {
+          ignoreCase: $('#chk-ignore-case').is(':checked'),
+          exactMatch: $('#chk-exact-match').is(':checked'),
+          revealResults: $('#chk-reveal-results').is(':checked')
+        };
+        var results = $searchableTree.treeview('search', [ pattern, options ]);
+
+        var output = '<p>' + results.length + ' matches found</p>';
+        $.each(results, function (index, result) {
+          output += '<p>- ' + result.text + '</p>';
+        });
+        $('#search-output').html(output);
+      }
+
+      $('#btn-search').on('click', search);
+      $('#input-search').on('keyup', search);
+
+      $('#btn-clear-search').on('click', function (e) {
+        $searchableTree.treeview('clearSearch');
+        $('#input-search').val('');
+        $('#search-output').html('');
+      });
+
+
+      var initSelectableTree = function() {
+        return $('#treeview-selectable').treeview({
+          data: defaultData,
+          multiSelect: $('#chk-select-multi').is(':checked'),
+          onNodeSelected: function(event, node) {
+            $('#selectable-output').prepend('<p>' + node.text + ' was selected</p>');
+          },
+          onNodeUnselected: function (event, node) {
+            $('#selectable-output').prepend('<p>' + node.text + ' was unselected</p>');
+          }
+        });
+      };
+      var $selectableTree = initSelectableTree();
+
+      var findSelectableNodes = function() {
+        return $selectableTree.treeview('search', [ $('#input-select-node').val(), { ignoreCase: false, exactMatch: false } ]);
+      };
+      var selectableNodes = findSelectableNodes();
+
+      $('#chk-select-multi:checkbox').on('change', function () {
+        console.log('multi-select change');
+        $selectableTree = initSelectableTree();
+        selectableNodes = findSelectableNodes();
+      });
+
+      // Select/unselect/toggle nodes
+      $('#input-select-node').on('keyup', function (e) {
+        selectableNodes = findSelectableNodes();
+        $('.select-node').prop('disabled', !(selectableNodes.length >= 1));
+      });
+
+      $('#btn-select-node.select-node').on('click', function (e) {
+        $selectableTree.treeview('selectNode', [ selectableNodes, { silent: $('#chk-select-silent').is(':checked') }]);
+      });
+
+      $('#btn-unselect-node.select-node').on('click', function (e) {
+        $selectableTree.treeview('unselectNode', [ selectableNodes, { silent: $('#chk-select-silent').is(':checked') }]);
+      });
+
+      $('#btn-toggle-selected.select-node').on('click', function (e) {
+        $selectableTree.treeview('toggleNodeSelected', [ selectableNodes, { silent: $('#chk-select-silent').is(':checked') }]);
+      });
+
+
+
+      var $expandibleTree = $('#treeview-expandible').treeview({
+        data: defaultData,
+        onNodeCollapsed: function(event, node) {
+          $('#expandible-output').prepend('<p>' + node.text + ' was collapsed</p>');
+        },
+        onNodeExpanded: function (event, node) {
+          $('#expandible-output').prepend('<p>' + node.text + ' was expanded</p>');
+        }
+      });
+
+      var findExpandibleNodess = function() {
+        return $expandibleTree.treeview('search', [ $('#input-expand-node').val(), { ignoreCase: false, exactMatch: false } ]);
+      };
+      var expandibleNodes = findExpandibleNodess();
+
+      // Expand/collapse/toggle nodes
+      $('#input-expand-node').on('keyup', function (e) {
+        expandibleNodes = findExpandibleNodess();
+        $('.expand-node').prop('disabled', !(expandibleNodes.length >= 1));
+      });
+
+      $('#btn-expand-node.expand-node').on('click', function (e) {
+        var levels = $('#select-expand-node-levels').val();
+        $expandibleTree.treeview('expandNode', [ expandibleNodes, { levels: levels, silent: $('#chk-expand-silent').is(':checked') }]);
+      });
+
+      $('#btn-collapse-node.expand-node').on('click', function (e) {
+        $expandibleTree.treeview('collapseNode', [ expandibleNodes, { silent: $('#chk-expand-silent').is(':checked') }]);
+      });
+
+      $('#btn-toggle-expanded.expand-node').on('click', function (e) {
+        $expandibleTree.treeview('toggleNodeExpanded', [ expandibleNodes, { silent: $('#chk-expand-silent').is(':checked') }]);
+      });
+
+      // Expand/collapse all
+      $('#btn-expand-all').on('click', function (e) {
+        var levels = $('#select-expand-all-levels').val();
+        $expandibleTree.treeview('expandAll', { levels: levels, silent: $('#chk-expand-silent').is(':checked') });
+      });
+
+      $('#btn-collapse-all').on('click', function (e) {
+        $expandibleTree.treeview('collapseAll', { silent: $('#chk-expand-silent').is(':checked') });
+      });
+
+
+
+      var $checkableTree = $('#treeview-checkable').treeview({
+        data: defaultData,
+        showIcon: false,
+        showCheckbox: true,
+        onNodeChecked: function(event, node) {
+          $('#checkable-output').prepend('<p>' + node.text + ' was checked</p>');
+        },
+        onNodeUnchecked: function (event, node) {
+          $('#checkable-output').prepend('<p>' + node.text + ' was unchecked</p>');
+        }
+      });
+
+      var findCheckableNodess = function() {
+        return $checkableTree.treeview('search', [ $('#input-check-node').val(), { ignoreCase: false, exactMatch: false } ]);
+      };
+      var checkableNodes = findCheckableNodess();
+
+      // Check/uncheck/toggle nodes
+      $('#input-check-node').on('keyup', function (e) {
+        checkableNodes = findCheckableNodess();
+        $('.check-node').prop('disabled', !(checkableNodes.length >= 1));
+      });
+
+      $('#btn-check-node.check-node').on('click', function (e) {
+        $checkableTree.treeview('checkNode', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+      });
+
+      $('#btn-uncheck-node.check-node').on('click', function (e) {
+        $checkableTree.treeview('uncheckNode', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+      });
+
+      $('#btn-toggle-checked.check-node').on('click', function (e) {
+        $checkableTree.treeview('toggleNodeChecked', [ checkableNodes, { silent: $('#chk-check-silent').is(':checked') }]);
+      });
+
+      // Check/uncheck all
+      $('#btn-check-all').on('click', function (e) {
+        $checkableTree.treeview('checkAll', { silent: $('#chk-check-silent').is(':checked') });
+      });
+
+      $('#btn-uncheck-all').on('click', function (e) {
+        $checkableTree.treeview('uncheckAll', { silent: $('#chk-check-silent').is(':checked') });
+      });
+
+
+
+      var $disabledTree = $('#treeview-disabled').treeview({
+        data: defaultData,
+        onNodeDisabled: function(event, node) {
+          $('#disabled-output').prepend('<p>' + node.text + ' was disabled</p>');
+        },
+        onNodeEnabled: function (event, node) {
+          $('#disabled-output').prepend('<p>' + node.text + ' was enabled</p>');
+        },
+        onNodeCollapsed: function(event, node) {
+          $('#disabled-output').prepend('<p>' + node.text + ' was collapsed</p>');
+        },
+        onNodeUnchecked: function (event, node) {
+          $('#disabled-output').prepend('<p>' + node.text + ' was unchecked</p>');
+        },
+        onNodeUnselected: function (event, node) {
+          $('#disabled-output').prepend('<p>' + node.text + ' was unselected</p>');
+        }
+      });
+
+      var findDisabledNodes = function() {
+        return $disabledTree.treeview('search', [ $('#input-disable-node').val(), { ignoreCase: false, exactMatch: false } ]);
+      };
+      var disabledNodes = findDisabledNodes();
+
+      // Expand/collapse/toggle nodes
+      $('#input-disable-node').on('keyup', function (e) {
+        disabledNodes = findDisabledNodes();
+        $('.disable-node').prop('disabled', !(disabledNodes.length >= 1));
+      });
+
+      $('#btn-disable-node.disable-node').on('click', function (e) {
+        $disabledTree.treeview('disableNode', [ disabledNodes, { silent: $('#chk-disable-silent').is(':checked') }]);
+      });
+
+      $('#btn-enable-node.disable-node').on('click', function (e) {
+        $disabledTree.treeview('enableNode', [ disabledNodes, { silent: $('#chk-disable-silent').is(':checked') }]);
+      });
+
+      $('#btn-toggle-disabled.disable-node').on('click', function (e) {
+        $disabledTree.treeview('toggleNodeDisabled', [ disabledNodes, { silent: $('#chk-disable-silent').is(':checked') }]);
+      });
+
+      // Expand/collapse all
+      $('#btn-disable-all').on('click', function (e) {
+        $disabledTree.treeview('disableAll', { silent: $('#chk-disable-silent').is(':checked') });
+      });
+
+      $('#btn-enable-all').on('click', function (e) {
+        $disabledTree.treeview('enableAll', { silent: $('#chk-disable-silent').is(':checked') });
+      });
+
+
+
+      var $tree = $('#treeview12').treeview({
+        data: json
+      });
+    });
+    </script>
+</body>
+</html>

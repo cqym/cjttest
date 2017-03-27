@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chanjet.qm.mapper.SciptConfigMapper">
+	<!-- 自定义返回结果集 -->
+	<resultMap id="sciptConfig" type="SciptConfigBean">
+		<id property="id" column="id" javaType="java.lang.Long"></id>
+		<result property="orderNum" column="order_num" javaType="java.lang.Integer"></result>
+		<result property="stepName" column="step_name" javaType="java.lang.String"></result>
+		<result property="stepDesc" column="step_desc" javaType="java.lang.String"></result>
+		<result property="reqParams" column="req_params" javaType="java.lang.String"></result>
+		<result property="rspParams" column="rsp_params" javaType="java.lang.String"></result>
+		<result property="releParams" column="rele_params" javaType="java.lang.String"></result>
+		<result property="templId" column="templ_id" javaType="java.lang.Long"></result>
+		<result property="reqInfo" column="req_info" javaType="java.lang.String"></result>
+	</resultMap>
+
+	<!--collection 为用于遍历的元素（必选），支持数组、List、Set -->
+	<!-- item 表示集合中每一个元素进行迭代时的别名. -->
+	<!--separator表示在每次进行迭代之间以什么符号作为分隔 符. -->
+
+	<!--#在生成SQL时，对于字符类型参数，会拼装引号 $在生成SQL时，不会拼装引号，可用于order by之类的参数拼装 -->
+	<select id="findModuleByCodition" parameterType="java.util.Map"
+		resultMap="sciptConfig">
+		select * from ss_sciptconfig where 1=1
+		<if test="title!=null">
+			and title like concat('%',#{title},'%')
+		</if>
+		<if test="clientType!=null">
+			and client_type = #{clientType}
+		</if>
+		limit ${index},${pageSize}
+	</select>
+
+
+
+
+
+</mapper>	

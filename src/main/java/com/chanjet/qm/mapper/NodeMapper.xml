@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="com.chanjet.qm.mapper.NodeMapper">
+
+	<!--<resultMap id="getNodesByTreeIDMap" type="Node">-->
+		<!--<id column="ID" property="iD" jdbcType="INTEGER"/>-->
+		<!--<result column="TreeID" property="treeID" jdbcType="INTEGER"/>-->
+		<!--<result column="PID" property="pID" jdbcType="INTEGER"/>-->
+		<!--<result column="OrderID" property="orderID" jdbcType="INTEGER"/>-->
+		<!--<result column="Obsolete" property="obsolete" jdbcType="INTEGER"/>-->
+		<!--<result column="Name" property="name" jdbcType="VARCHAR"/>-->
+		<!--&lt;!&ndash;<result column="map_visiable" property="mapVisiable" javaType="java.lang.Boolean" jdbcType="BIT" typeHandler="org.apache.ibatis.type.BooleanTypeHandler"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="backcolor" property="backcolor" jdbcType="VARCHAR"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="color_visiable" property="colorVisiable" javaType="java.lang.Boolean" jdbcType="BIT" typeHandler="org.apache.ibatis.type.BooleanTypeHandler"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="order_num" property="orderNum" jdbcType="INTEGER"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="created_at" property="createdAt" jdbcType="TIMESTAMP"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="created_by" property="createdBy" jdbcType="INTEGER"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="updated_at" property="updatedAt" jdbcType="TIMESTAMP"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="updated_by" property="updatedBy" jdbcType="INTEGER"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="extend" property="extend" jdbcType="VARCHAR"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="description" property="description" jdbcType="VARCHAR"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="long_effective" property="longEffective" javaType="java.lang.Boolean" jdbcType="BIT" typeHandler="org.apache.ibatis.type.BooleanTypeHandler"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>&ndash;&gt;-->
+		<!--&lt;!&ndash;<result column="url_type" property="urlType" jdbcType="INTEGER"/>&ndash;&gt;-->
+	<!--</resultMap>-->
+
+
+	<!--&lt;!&ndash;获得商品信息并分页 &ndash;&gt;-->
+	<!--<select id="getNodesByTreeID" resultType="getNodesByTreeID" parameterMap="java.util.Map">-->
+		<!--SELECT TreeID,ID, PID, OrderID, Obsolete, Name FROM tree_nodes WHERE TreeID = #{TreeID}-->
+		<!--ORDER BY PID, OrderID ASC;-->
+	<!--</select>-->
+
+</mapper>
